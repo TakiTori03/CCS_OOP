@@ -1,19 +1,45 @@
+// Gradle script to build and run the ccs_app
+
+// Note: "common.gradle" in the root project contains additional initialization
+//   for this project. This initialization is applied in the "build.gradle"
+//   of the root project.
+
 plugins {
-    id 'java'
+    id 'application' // to build JVM applications
 }
 
-group = 'hust.ccs'
-version = '1.0-SNAPSHOT'
-
-repositories {
-    mavenCentral()
+application {
+    mainClass = 'hust.ccs.demo.AppDemo'
 }
 
 dependencies {
-    testImplementation platform('org.junit:junit-bom:5.10.0')
-    testImplementation 'org.junit.jupiter:junit-jupiter'
+    runtimeOnly(libs.jme3.awt.dialogs)
+    runtimeOnly(libs.jme3.desktop)
+    runtimeOnly(libs.jme3.jogg)
+    runtimeOnly(libs.jme3.lwjgl3)
+
+    // non-JME dependencies:
+    implementation(libs.garrett)
+    implementation(libs.minie)
+
+    implementation project(':ccs_common')
+    implementation project(':ccs_vehicle') // for local library build
+    //implementation 'com.github.stephengold:MaVehicles:' + maVehiclesVersion // for published library
 }
 
-test {
-    useJUnitPlatform()
+// Register cleanup tasks:
+
+clean.dependsOn('cleanDLLs', 'cleanDyLibs', 'cleanLogs', 'cleanSOs')
+
+tasks.register('cleanDLLs', Delete) { // extracted Windows native libraries
+    delete fileTree(dir: '.', include: '*.dll')
+}
+tasks.register('cleanDyLibs', Delete) { // extracted macOS native libraries
+    delete fileTree(dir: '.', include: '*.dylib')
+}
+tasks.register('cleanLogs', Delete) { // JVM crash logs
+    delete fileTree(dir: '.', include: 'hs_err_pid*.log')
+}
+tasks.register('cleanSOs', Delete) { // extracted Linux and Android native libraries
+    delete fileTree(dir: '.', include: '*.so')
 }

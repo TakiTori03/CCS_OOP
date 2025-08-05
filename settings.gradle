@@ -30,3 +30,4 @@ def subDirs = rootDir.listFiles(
 subDirs.each { File sub ->
     include sub.name
 }
+include 'ccs_app'

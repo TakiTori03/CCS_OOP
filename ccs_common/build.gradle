@@ -1,19 +1,15 @@
-plugins {
-    id 'java'
-}
+// Gradle script to build the ccs_common
 
-group = 'hust.ccs'
-version = '1.0-SNAPSHOT'
-
-repositories {
-    mavenCentral()
-}
+// Note: "common.gradle" in the root project contains additional initialization
+//   for this project. This initialization is applied in the "build.gradle"
+//   of the root project.
 
 dependencies {
-    testImplementation platform('org.junit:junit-bom:5.10.0')
-    testImplementation 'org.junit.jupiter:junit-jupiter'
-}
+    implementation(libs.jme3.desktop)
+    implementation(libs.minie)
+    implementation(libs.skyControl)
+    runtimeOnly(libs.jme3.lwjgl3)
 
-test {
-    useJUnitPlatform()
+    implementation project(':ccs_vehicle') // for local library build
+    //compileOnly 'com.github.stephengold:MaVehicles:' + maVehiclesVersion // for published library
 }
