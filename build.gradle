@@ -1,0 +1,26 @@
+plugins {
+    id 'java'
+}
+
+ext{
+    ccsVersion = '1.0-SNAPSHOT'
+}
+
+subprojects {
+    apply from: rootProject.file('common.gradle')
+}
+
+configurations.configureEach {
+    resolutionStrategy.cacheChangingModulesFor 0, 'seconds' // to disable caching of snapshots
+}
+
+// Register publishing tasks:
+
+tasks.register('install') {
+    dependsOn ':ccs_vehicle:install'
+    description = 'Installs Maven artifacts to the local repository.'
+}
+tasks.register('release') {
+    dependsOn ':ccs_vehicle:release'
+    description = 'Stages Maven artifacts to the Central Publisher Portal.'
+}

@@ -1,0 +1,34 @@
+## catalog of libraries and plugins used to build the jme-vehicles project
+
+[versions]
+
+jme = "3.9.0-alpha2"
+
+[libraries]
+
+acorus = "com.github.stephengold:Acorus:2.0.2"
+garrett = "com.github.stephengold:Garrett:0.5.4"
+groovy-jsr223 = "org.apache.groovy:groovy-jsr223:4.0.27"
+heart = "com.github.stephengold:Heart:9.2.0"
+jme-ttf = "com.github.stephengold:jme-ttf:3.0.1"
+
+jme3-awt-dialogs = { module = "org.jmonkeyengine:jme3-awt-dialogs", version.ref = "jme" }
+jme3-core = { module = "org.jmonkeyengine:jme3-core", version.ref = "jme" }
+jme3-desktop = { module = "org.jmonkeyengine:jme3-desktop", version.ref = "jme" }
+jme3-effects = { module = "org.jmonkeyengine:jme3-effects", version.ref = "jme" }
+jme3-jogg = { module = "org.jmonkeyengine:jme3-jogg", version.ref = "jme" }
+jme3-lwjgl3 = { module = "org.jmonkeyengine:jme3-lwjgl3", version.ref = "jme" }
+jme3-plugins = { module = "org.jmonkeyengine:jme3-plugins", version.ref = "jme" }
+
+jme3-utilities-nifty = "com.github.stephengold:jme3-utilities-nifty:0.9.37"
+jmePower = "com.github.stephengold:JmePower:1.1.1"
+lemur = "com.simsilica:lemur:1.16.0"
+lemur-props = "com.simsilica:lemur-props:1.2.0"
+log4j-impl = "org.apache.logging.log4j:log4j-slf4j-impl:2.24.3"
+minie = "com.github.stephengold:Minie:9.0.1"
+nifty-style-black = "com.github.nifty-gui:nifty-style-black:1.4.3"
+skyControl = "com.github.stephengold:SkyControl:1.1.0"
+
+[bundles]
+
+[plugins]
