@@ -9,7 +9,7 @@ plugins {
 }
 
 application {
-    mainClass = 'hust.ccs.demo.AppDemo'
+    mainClass = 'hust.ccs.demo.lemurdemo.AppDemo'
 }
 
 dependencies {
@@ -18,18 +18,28 @@ dependencies {
     runtimeOnly(libs.jme3.jogg)
     runtimeOnly(libs.jme3.lwjgl3)
 
+    // MavDemo1 doesn't use jme3-plugins
+    //  -- it is included solely to avoid warnings from AssetConfig.
+    runtimeOnly(libs.jme3.plugins)
+
     // non-JME dependencies:
     implementation(libs.garrett)
+    implementation(libs.jmePower)
     implementation(libs.minie)
+    implementation(libs.lemur)
+    implementation(libs.lemur.props)
+    runtimeOnly(libs.log4j.impl)
+    runtimeOnly(libs.groovy.jsr223)
 
     implementation project(':ccs_common')
-    implementation project(':ccs_vehicle') // for local library build
+    implementation project(':ccs_core') // for local library build
     //implementation 'com.github.stephengold:MaVehicles:' + maVehiclesVersion // for published library
 }
 
 // Register cleanup tasks:
 
 clean.dependsOn('cleanDLLs', 'cleanDyLibs', 'cleanLogs', 'cleanSOs')
+clean.dependsOn('cleanScreenShots')
 
 tasks.register('cleanDLLs', Delete) { // extracted Windows native libraries
     delete fileTree(dir: '.', include: '*.dll')
@@ -42,4 +52,7 @@ tasks.register('cleanLogs', Delete) { // JVM crash logs
 }
 tasks.register('cleanSOs', Delete) { // extracted Linux and Android native libraries
     delete fileTree(dir: '.', include: '*.so')
+}
+tasks.register('cleanScreenShots', Delete) {
+    delete fileTree(dir: '.', include: 'screen_shot*.png')
 }

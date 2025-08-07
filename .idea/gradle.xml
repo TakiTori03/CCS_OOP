@@ -11,7 +11,7 @@
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/ccs_app" />
             <option value="$PROJECT_DIR$/ccs_common" />
-            <option value="$PROJECT_DIR$/ccs_vehicle" />
+            <option value="$PROJECT_DIR$/ccs_core" />
           </set>
         </option>
       </GradleProjectSettings>
