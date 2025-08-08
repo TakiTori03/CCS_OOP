@@ -5,7 +5,9 @@ import com.jme3.asset.AssetManager;
 import com.simsilica.lemur.Button;
 import hust.ccs.World;
 import hust.ccs.demo.lemurdemo.AppDemo;
+import hust.ccs.examples.worlds.EndlessPlain;
 import hust.ccs.examples.worlds.Mountains;
+import hust.ccs.examples.worlds.Racetrack;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -16,8 +18,6 @@ import java.util.logging.Logger;
 
  */
 class WorldMenu extends AnimatedMenu {
-    // *************************************************************************
-    // constants and loggers
 
     /**
      * message logger for this class
@@ -36,14 +36,12 @@ class WorldMenu extends AnimatedMenu {
     protected List<Button> createItems() {
         List<Button> result = new ArrayList<>(5);
 
-//        addButton(result, "Endless Plain",
-//                source -> setWorld(new EndlessPlain()));
+        addButton(result, "Endless Plain",
+                source -> setWorld(new EndlessPlain()));
         addButton(result, "Mountains",
                 source -> setWorld(new Mountains()));
-//        addButton(result, "Playground",
-//                source -> setWorld(new Playground()));
-//        addButton(result, "Racetrack",
-//                source -> setWorld(new Racetrack()));
+        addButton(result, "Racetrack",
+                source -> setWorld(new Racetrack()));
         addButton(result, "<< Back",
                 source -> animateOut(() -> goTo(new MainMenu())));
 

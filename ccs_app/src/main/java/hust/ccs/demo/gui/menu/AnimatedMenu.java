@@ -25,8 +25,7 @@ import java.util.logging.Logger;
  * Derived from the AnimatedMenuState class in the Advanced Vehicles project.
  */
 abstract class AnimatedMenu extends BaseAppState {
-    // *************************************************************************
-    // constants and loggers
+
 
     /**
      * delay between successive button animations (in seconds)

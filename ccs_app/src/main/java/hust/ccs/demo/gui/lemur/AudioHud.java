@@ -32,8 +32,6 @@ import java.util.logging.Logger;
 public class AudioHud
         extends BaseAppState
         implements GlobalAudio {
-    // *************************************************************************
-    // constants and loggers
 
     /**
      * Z-coordinate for most GUI geometries

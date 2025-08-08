@@ -8,11 +8,8 @@ import java.util.logging.Logger;
 
 /**
  * An AnimatedMenu to access the customization menus.
-
  */
 public class CustomizationMenu extends AnimatedMenu {
-    // *************************************************************************
-    // constants and loggers
 
     /**
      * message logger for this class

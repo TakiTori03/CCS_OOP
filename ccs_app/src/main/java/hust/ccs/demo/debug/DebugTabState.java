@@ -10,8 +10,7 @@ import com.simsilica.lemur.props.PropertyPanel;
 import hust.ccs.gui.VehiclePointsState;
 
 final public class DebugTabState extends BaseAppState {
-    // *************************************************************************
-    // fields
+
 
     private boolean displayFps = false;
     private boolean displayStats = false;

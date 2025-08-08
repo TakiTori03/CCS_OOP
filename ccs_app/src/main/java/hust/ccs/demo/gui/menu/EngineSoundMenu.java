@@ -9,6 +9,8 @@ import hust.ccs.demo.gui.lemur.AudioHud;
 import hust.ccs.demo.lemurdemo.AppDemo;
 import hust.ccs.examples.sounds.EngineSound1;
 import hust.ccs.examples.sounds.EngineSound2;
+import hust.ccs.examples.sounds.EngineSound4;
+import hust.ccs.examples.sounds.EngineSound5;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -16,12 +18,9 @@ import java.util.logging.Logger;
 
 /**
  * An AnimatedMenu to select an engine sound.
- *
- * @author Stephen Gold sgold@sonic.net
+
  */
 class EngineSoundMenu extends AnimatedMenu {
-    // *************************************************************************
-    // constants and loggers
 
     /**
      * message logger for this class
@@ -49,8 +48,8 @@ class EngineSoundMenu extends AnimatedMenu {
 
         addButton(result, "Engine-1", source -> setSound(new EngineSound1()));
         addButton(result, "Engine-2", source -> setSound(new EngineSound2()));
-//        addButton(result, "Engine-4", source -> setSound(new EngineSound4()));
-//        addButton(result, "Engine-5", source -> setSound(new EngineSound5()));
+        addButton(result, "Engine-4", source -> setSound(new EngineSound4()));
+        addButton(result, "Engine-5", source -> setSound(new EngineSound5()));
         addButton(result, "Silence", source -> setSound(null));
         addButton(result, "<< Back",
                 source -> animateOut(() -> goTo(new CustomizationMenu())));

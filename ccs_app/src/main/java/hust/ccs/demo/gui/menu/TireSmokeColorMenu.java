@@ -15,8 +15,7 @@ import java.util.logging.Logger;
  * An AnimatedMenu to select a color for tire smoke.
  */
 class TireSmokeColorMenu extends AnimatedMenu {
-    // *************************************************************************
-    // constants and loggers
+
 
     /**
      * message logger for this class

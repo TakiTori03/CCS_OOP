@@ -17,8 +17,6 @@ import java.util.logging.Logger;
 /**
  * A Prop for a free-standing warning sign, built around a portion of Sabri
  * Ayeş's "Barrier &amp; Traffic Cone Pack".
- *
- * @author Stephen Gold sgold@sonic.net
  */
 public class WarningSign extends Prop {
     // *************************************************************************

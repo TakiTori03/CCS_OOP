@@ -16,8 +16,7 @@ import hust.ccs.Vehicle;
 import hust.ccs.part.Wheel;
 
 public class TireDataState extends BaseAppState {
-    // *************************************************************************
-    // fields
+
 
     final private static int graphHeight = 100;
     final private static int graphWidth = 200;

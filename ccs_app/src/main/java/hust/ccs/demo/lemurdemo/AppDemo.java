@@ -31,7 +31,9 @@ import hust.ccs.demo.input.*;
 import hust.ccs.examples.skies.AnimatedNightSky;
 import hust.ccs.examples.skies.QuarrySky;
 import hust.ccs.examples.vehicles.HoverTank;
+import hust.ccs.examples.vehicles.Nismo;
 import hust.ccs.examples.worlds.Mountains;
+import hust.ccs.examples.worlds.Racetrack;
 import hust.ccs.gui.CompassState;
 import hust.ccs.gui.GearNameState;
 import hust.ccs.gui.VehiclePointsState;
@@ -72,11 +74,11 @@ final public class AppDemo extends SimpleApplication {
 //        new HatchBack(),
         new HoverTank(),
         new Mountains(),
-//        new Nismo(),
+        new Nismo(),
 //        new Playground(),
 //        new PickupTruck(),
 //        new QuarrySky(),
-//        new Racetrack(),
+        new Racetrack(),
 //        new Rotator(),
         new VehiclePointsState()
     };

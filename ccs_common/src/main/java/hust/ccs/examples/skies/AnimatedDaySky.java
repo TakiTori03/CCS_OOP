@@ -17,8 +17,7 @@ import java.util.logging.Logger;
 
 /**
  * An example of a daytime sky using SkyControl.
- *
- * @author Stephen Gold sgold@sonic.net
+
  */
 public class AnimatedDaySky extends Sky {
     // *************************************************************************

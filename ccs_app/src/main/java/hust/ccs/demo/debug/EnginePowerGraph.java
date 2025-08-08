@@ -17,8 +17,7 @@ import hust.ccs.part.Engine;
 import java.util.logging.Logger;
 
 final public class EnginePowerGraph extends Geometry {
-    // *************************************************************************
-    // constants and loggers
+
 
     /**
      * message logger for this class

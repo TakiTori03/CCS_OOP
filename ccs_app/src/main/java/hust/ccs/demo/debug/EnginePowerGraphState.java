@@ -13,8 +13,7 @@ import com.jme3.scene.shape.Quad;
 import hust.ccs.Vehicle;
 
 public class EnginePowerGraphState extends BaseAppState {
-    // *************************************************************************
-    // fields
+
 
     private Geometry line;
 

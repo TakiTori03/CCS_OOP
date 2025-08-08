@@ -8,8 +8,7 @@ import hust.ccs.Vehicle;
 import hust.ccs.part.Brake;
 
 public class BrakesEditor extends Container {
-    // *************************************************************************
-    // fields
+
 
     final private Vehicle vehicle;
     // *************************************************************************

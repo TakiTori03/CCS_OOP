@@ -16,8 +16,7 @@ import java.util.logging.Logger;
  * An AnimatedMenu to choose among the available speedometers.
  */
 class SpeedometerMenu extends AnimatedMenu {
-    // *************************************************************************
-    // constants and loggers
+
 
     /**
      * message logger for this class

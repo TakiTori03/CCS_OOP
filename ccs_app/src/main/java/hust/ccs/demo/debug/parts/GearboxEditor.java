@@ -8,8 +8,7 @@ import hust.ccs.Vehicle;
 import hust.ccs.part.Gear;
 
 public class GearboxEditor extends Container {
-    // *************************************************************************
-    // fields
+
 
     final private Vehicle vehicle;
     // *************************************************************************

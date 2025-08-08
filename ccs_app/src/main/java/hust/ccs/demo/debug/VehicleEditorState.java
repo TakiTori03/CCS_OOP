@@ -12,8 +12,7 @@ import hust.ccs.demo.debug.parts.*;
 import hust.ccs.demo.lemurdemo.AppDemo;
 
 final public class VehicleEditorState extends BaseAppState {
-    // *************************************************************************
-    // fields
+
 
     final public static int Width = 350;
     final public static SpringGridLayout Layout = new SpringGridLayout(

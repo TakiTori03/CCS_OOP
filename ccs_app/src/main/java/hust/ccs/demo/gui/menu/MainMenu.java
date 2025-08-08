@@ -17,8 +17,7 @@ import java.util.List;
 import java.util.logging.Logger;
 
 public class MainMenu extends AnimatedMenu {
-    // *************************************************************************
-    // constants and loggers
+
 
     /**
      * message logger for this class

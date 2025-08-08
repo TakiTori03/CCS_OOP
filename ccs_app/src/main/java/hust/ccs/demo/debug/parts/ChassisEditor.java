@@ -7,8 +7,7 @@ import com.simsilica.lemur.props.PropertyPanel;
 import hust.ccs.Vehicle;
 
 public class ChassisEditor extends Container {
-    // *************************************************************************
-    // constructors
+
 
     public ChassisEditor(Vehicle vehicle) {
         super();

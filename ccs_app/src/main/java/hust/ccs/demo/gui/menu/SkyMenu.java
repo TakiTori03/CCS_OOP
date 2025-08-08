@@ -18,8 +18,7 @@ import java.util.logging.Logger;
  * An AnimatedMenu to choose among the available skies.
  */
 class SkyMenu extends AnimatedMenu {
-    // *************************************************************************
-    // constants and loggers
+
 
     /**
      * message logger for this class

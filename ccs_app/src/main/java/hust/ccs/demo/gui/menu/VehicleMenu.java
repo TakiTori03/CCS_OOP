@@ -6,7 +6,7 @@ import com.simsilica.lemur.Button;
 import hust.ccs.Vehicle;
 import hust.ccs.demo.input.CameraInputMode;
 import hust.ccs.demo.lemurdemo.AppDemo;
-import hust.ccs.examples.vehicles.HoverTank;
+import hust.ccs.examples.vehicles.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -18,8 +18,6 @@ import java.util.logging.Logger;
  * Derived from the CarSelectorState class in the Advanced Vehicles project.
  */
 class VehicleMenu extends AnimatedMenu {
-    // *************************************************************************
-    // constants and loggers
 
     /**
      * message logger for this class
@@ -38,20 +36,17 @@ class VehicleMenu extends AnimatedMenu {
     protected List<Button> createItems() {
         List<Button> result = new ArrayList<>(9);
 
-//        addButton(result, "Classic Motorcycle",
-//                source -> setVehicle(new ClassicMotorcycle()));
-//        addButton(result, "Grand Tourer",
-//                source -> setVehicle(new GrandTourer()));
-//        addButton(result, "Nismo",
-//                source -> setVehicle(new Nismo()));
-//        addButton(result, "Pickup Truck",
-//                source -> setVehicle(new PickupTruck()));
-//        addButton(result, "Hatchback",
-//                source -> setVehicle(new HatchBack()));
-//        addButton(result, "Dune Buggy",
-//                source -> setVehicle(new DuneBuggy()));
-//        addButton(result, "Rotator",
-//                source -> setVehicle(new Rotator()));
+
+        addButton(result, "Grand Tourer",
+                source -> setVehicle(new GrandTourer()));
+        addButton(result, "Nismo",
+                source -> setVehicle(new Nismo()));
+        addButton(result, "Pickup Truck",
+                source -> setVehicle(new PickupTruck()));
+        addButton(result, "Hatchback",
+                source -> setVehicle(new HatchBack()));
+        addButton(result, "Lamborghini",
+                source -> setVehicle(new Aventador()));
         addButton(result, "Hover Tank",
                 source -> setVehicle(new HoverTank()));
         addButton(result, "<< Back",

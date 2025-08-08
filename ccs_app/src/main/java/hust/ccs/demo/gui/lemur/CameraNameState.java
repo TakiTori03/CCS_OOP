@@ -11,8 +11,7 @@ import hust.ccs.gui.CartoucheState;
  * A CartoucheState to display the name of the default camera.
  */
 public class CameraNameState extends CartoucheState {
-    // *************************************************************************
-    // constructors
+
 
     /**
      * Instantiate an enabled CartoucheState.
